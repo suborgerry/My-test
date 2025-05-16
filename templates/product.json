@@ -54,6 +54,7 @@
         },
         "description": {
           "type": "description",
+          "disabled": true,
           "settings": {}
         },
         "share": {
@@ -90,6 +91,41 @@
         "padding_bottom": 12
       }
     },
+    "tabs_3XfgAB": {
+      "type": "tabs",
+      "blocks": {
+        "description_JXT69C": {
+          "type": "description",
+          "settings": {}
+        },
+        "tab_cC89wJ": {
+          "type": "tab",
+          "settings": {
+            "title": "Shipping & Returns",
+            "content": "<p>The Ultimate Testing Solution for Precision Analysis.</p>"
+          }
+        },
+        "tab_zwEAnH": {
+          "type": "tab",
+          "settings": {
+            "title": "FAQs",
+            "content": "<p>Lorem ipsum: The Virtual Hub for Reliable Information and Resources.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "description_JXT69C",
+        "tab_cC89wJ",
+        "tab_zwEAnH"
+      ],
+      "name": "Tabs",
+      "settings": {}
+    },
+    "sticky_add_to_cart_TUpGU8": {
+      "type": "sticky-add-to-cart",
+      "name": "Sticky add to cart",
+      "settings": {}
+    },
     "related-products": {
       "type": "related-products",
       "settings": {
@@ -111,6 +147,8 @@
   },
   "order": [
     "main",
+    "tabs_3XfgAB",
+    "sticky_add_to_cart_TUpGU8",
     "related-products"
   ]
 }

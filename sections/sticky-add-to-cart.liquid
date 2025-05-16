@@ -1,0 +1,71 @@
+    <div
+      id="StickyAddToCart"
+      class="sticky-add-to-cart hidden lg:block"
+      data-product-sticky
+    >
+      <div class="page-width flex items-center justify-between gap-4 py-3 border-t border-border bg-background">
+        <div class="flex items-center gap-4">
+          <h2 class="text-base font-medium" id="StickyProductTitle">{{ product.title }}</h2>
+          {% if product.variants.size > 1 %}
+            <variant-selects
+              class="variant-selects-sticky flex gap-4 items-center"
+              data-sticky-variant
+            >
+              {% for option in product.options_with_values %}
+                <div class="product-form__input product-form__input--dropdown">
+                  <label for="Option{{ forloop.index }}">{{ option.name }}</label>
+                  <select
+                    id="Option{{ forloop.index }}"
+                    name="options[{{ option.name }}]"
+                  >
+                    {% for value in option.values %}
+                      <option value="{{ value | escape }}">
+                        {{ value }}
+                      </option>
+                    {% endfor %}
+                  </select>
+                </div>
+              {% endfor %}
+            </variant-selects>
+          {% endif %}
+        </div>
+  
+        <product-form class="product-form" data-sticky-form>
+          <form
+            method="post"
+            action="/cart/add"
+            id="StickyAddToCartForm"
+            accept-charset="UTF-8"
+            enctype="multipart/form-data"
+            class="form"
+          >
+            <input
+              type="hidden"
+              name="id"
+              value="{{ product.selected_or_first_available_variant.id }}"
+              data-sticky-variant-input
+            >
+            <button
+              type="submit"
+              class="button button--primary"
+            >
+              {{ 'products.product.add_to_cart' | t }}
+            </button>
+          </form>
+        </product-form>
+      </div>
+    </div>
+  
+    {{ 'sticky-add-to-cart.js' | asset_url | script_tag }}
+    {{ 'sticky-add-to-cart.css' | asset_url | stylesheet_tag }}
+
+  {% schema %}
+  {
+    "name": "Sticky add to cart",
+    "presets": [
+        {
+            "name": "Sticky add to cart"
+        }
+    ]
+  }
+  {% endschema %}

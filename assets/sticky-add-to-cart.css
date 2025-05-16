@@ -1,0 +1,50 @@
+.sticky-add-to-cart {
+    position: fixed;
+    width: 100%;
+    background-color: #fff;
+    bottom: 0;
+    z-index: 30;
+    /* background: var(--color-background); */
+    box-shadow: 0 -1px 4px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    border-top: 1px solid #000;
+  }
+  
+  .sticky-add-to-cart.hidden {
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(100%);
+  }
+  
+  .product-form__controls-group {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    margin-right: 1rem;
+  }
+
+  .sticky-add-to-cart .product-form__input--dropdown {
+    margin-bottom: 0;
+  }
+  
+  .product-form__input--dropdown select {
+    min-width: 140px;
+  }
+
+  .flex {
+    display: flex;
+  }
+
+  .items-center {
+    align-items: center;
+    justify-content: center;
+  }
+
+  .gap-4 {
+    row-gap: 20px;
+    column-gap: 20px;
+  }
+
+  .py-3 {
+    padding: 0 15px;
+  }
