@@ -1,0 +1,92 @@
+<div class="tabs-section page-width" data-tabs>
+  <div class="tabs-buttons" role="tablist">
+    {% for block in section.blocks %}
+        {% case block.type %}
+        {% when 'tab' %}
+      <button
+        class="tab-button {% if forloop.first %}active{% endif %} h2"
+        role="tab"
+        data-tab-button="{{ forloop.index0 }}"
+      >
+        {{ block.settings.title | escape }}
+      </button>
+      {% when 'description' %}
+        <button
+    class="tab-button {% if forloop.first %}active{% endif %} h2"
+    role="tab"
+    data-tab-button="{{ forloop.index0 }}"
+  >
+    {{ 'Description' }}
+  </button>
+    {% endcase %}
+    {% endfor %}
+  </div>
+
+  <div class="tabs-contents">
+    {% for block in section.blocks %}
+        {% case block.type %}
+            {% when 'tab' %}
+                <div
+                  class="tab-content {% if forloop.first %}active{% endif %}"
+                  role="tabpanel"
+                  data-tab-content="{{ forloop.index0 }}"
+                >
+                  {{ block.settings.content }}
+                </div>   
+            {% when 'description' %}
+                <div
+                    class="tab-content {% if forloop.first %}active{% endif %}"
+                    role="tabpanel"
+                    data-tab-content="{{ forloop.index0 }}"
+                >
+                    {% if product.description != empty %}
+                        {{ product.description }}
+                    {% endif %}
+                </div>      
+        {% endcase %}
+    {% endfor %}
+  </div>
+</div>
+
+{{ 'tabs.css' | asset_url | stylesheet_tag }}
+{{ 'tabs.js' | asset_url | script_tag }}
+
+{% schema %}
+{
+  "name": "Tabs Section",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Tabs Settings"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "tab",
+      "name": "Tab",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Tab Title"
+        },
+        {
+          "type": "richtext",
+          "id": "content",
+          "label": "Tab Content"
+        }
+      ]
+    },
+    {
+        "type": "description",
+        "name": "Description"
+    }
+  ],
+  "max_blocks": 5,
+  "presets": [
+    {
+      "name": "Tabs"
+    }
+  ]
+}
+{% endschema %}
