@@ -15,9 +15,81 @@
         "padding_top": 28,
         "padding_bottom": 28
       }
+    },
+    "multirow_fkYdmN": {
+      "type": "multirow",
+      "blocks": {
+        "row_LVH4i7": {
+          "type": "row",
+          "settings": {
+            "image": "shopify://shop_images/1000s.jpg",
+            "caption": "",
+            "heading": "<strong>Modern Luxury, Timeless Craftsmanship</strong>",
+            "text": "<p>Whether you're furnishing a modern condo or a classic brownstone, our pieces bring harmony and elegance to any interior. We believe that true luxury is about quality, design, and personal touch.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "row_RHPJEJ": {
+          "type": "row",
+          "settings": {
+            "image": "shopify://shop_images/1630500718-bb32205a38d7474ebaef236218548fe8.jpg",
+            "caption": "",
+            "heading": "<strong>Tailored for the Discerning Eye</strong>",
+            "text": "<p>From sleek lines to intricate detailing, our curated selection of luxury furniture is sourced from top-tier designers and manufacturers. Every piece tells a story of craftsmanship and aesthetic excellence.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "row_ty9PEe": {
+          "type": "row",
+          "settings": {
+            "image": "shopify://shop_images/1000s_e98a14b5-7ec0-4aa4-97b5-78c078e6531f.jpg",
+            "caption": "",
+            "heading": "<strong>Visit Our Philadelphia Showroom</strong>",
+            "text": "<p>Step into our showroom and experience the textures, colors, and finishes firsthand. Our expert team is here to help you select pieces that reflect your vision and lifestyle.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "row_MBLTXW": {
+          "type": "row",
+          "settings": {
+            "image": "shopify://shop_images/IMG_6981.0.0.0.0.jpg",
+            "caption": "",
+            "heading": "<strong>Let’s Bring Your Vision to Life</strong>",
+            "text": "<p>Whether you're starting fresh or redesigning a space, our design consultants are here to support you every step of the way. From room planning to custom orders, we’re committed to your satisfaction.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "row_LVH4i7",
+        "row_RHPJEJ",
+        "row_ty9PEe",
+        "row_MBLTXW"
+      ],
+      "name": "t:sections.multirow.presets.name",
+      "settings": {
+        "image_height": "medium",
+        "desktop_image_width": "medium",
+        "image_layout": "alternate-left",
+        "heading_size": "h1",
+        "text_style": "body",
+        "button_style": "secondary",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "section_color_scheme": "",
+        "row_color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
-    "main"
+    "main",
+    "multirow_fkYdmN"
   ]
 }
